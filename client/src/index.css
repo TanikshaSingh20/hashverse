@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "tailwindcss";
 :root {
   --text: #6b6375;
@@ -109,4 +110,11 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+=======
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+>>>>>>> e5ae96dcefd71aa34e7c01fc755f132fc15bebc7
 }

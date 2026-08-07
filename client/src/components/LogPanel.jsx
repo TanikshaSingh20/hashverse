@@ -13,4 +13,8 @@ const LogPanel = ({ logs }) => {
   );
 };
 
+<<<<<<< HEAD
 export default LogPanel;
+=======
+export default LogPanel;
+>>>>>>> e5ae96dcefd71aa34e7c01fc755f132fc15bebc7

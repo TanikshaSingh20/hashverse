@@ -66,4 +66,8 @@ const HashRing = ({ nodes, dataKeys }) => {
   );
 };
 
+<<<<<<< HEAD
 export default HashRing;
+=======
+export default HashRing;
+>>>>>>> e5ae96dcefd71aa34e7c01fc755f132fc15bebc7

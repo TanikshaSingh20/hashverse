@@ -1,3 +1,119 @@
+<<<<<<< HEAD
+=======
+// const express = require('express');
+// const router = express.Router();
+
+// const VIRTUAL_NODE_COUNT = 3;
+
+// let nodes = []; // [{ id, name, hash, virtualNodes }]
+// let dataKeys = []; // [{ key, hash, assignedNode, assignedVirtualNode }]
+
+// const hashFn = (str) =>
+//   parseInt(
+//     require('crypto').createHash('md5').update(str).digest('hex').slice(0, 8),
+//     16
+//   );
+
+// function redistribute() {
+//   if (nodes.length === 0) {
+//     dataKeys.forEach((dataKey) => {
+//       dataKey.assignedNode = null;
+//       dataKey.assignedVirtualNode = null;
+//     });
+//     return;
+//   }
+
+//   const sortedVirtualNodes = nodes
+//     .flatMap((node) =>
+//       node.virtualNodes.map((virtualNode) => ({
+//         ...virtualNode,
+//         physicalNode: node,
+//       }))
+//     )
+//     .sort((a, b) => a.hash - b.hash);
+
+//   dataKeys.forEach((dataKey) => {
+//     let assigned = sortedVirtualNodes.find(
+//       (virtualNode) => virtualNode.hash >= dataKey.hash
+//     );
+//     if (!assigned) assigned = sortedVirtualNodes[0];
+
+//     dataKey.assignedNode = assigned.physicalNode;
+//     dataKey.assignedVirtualNode = {
+//       id: assigned.id,
+//       index: assigned.index,
+//       hash: assigned.hash,
+//     };
+//   });
+// }
+
+// router.get('/state', (req, res) => {
+//   res.json({ nodes, dataKeys });
+// });
+
+// router.post('/add-node', (req, res) => {
+//   const name = req.body.name?.trim();
+
+//   if (!name) {
+//     return res.status(400).json({ message: 'Node name is required' });
+//   }
+
+//   if (nodes.some((node) => node.name === name)) {
+//     return res.status(409).json({ message: `Node "${name}" already exists` });
+//   }
+
+//   const hash = hashFn(name);
+//   const virtualNodes = Array.from({ length: VIRTUAL_NODE_COUNT }, (_, index) => ({
+//     id: `${name}#${index}`,
+//     index,
+//     hash: hashFn(`${name}#${index}`),
+//   }));
+//   const node = { id: Date.now(), name, hash, virtualNodes };
+//   nodes.push(node);
+//   redistribute();
+//   res.json({ nodes, dataKeys });
+// });
+
+// router.post('/remove-node', (req, res) => {
+//   const name = req.body.name?.trim();
+
+//   if (!name) {
+//     return res.status(400).json({ message: 'Node name is required' });
+//   }
+
+//   nodes = nodes.filter((node) => node.name !== name);
+//   redistribute();
+//   res.json({ nodes, dataKeys });
+// });
+
+// router.post('/add-key', (req, res) => {
+//   const key = req.body.key?.trim();
+
+//   if (!key) {
+//     return res.status(400).json({ message: 'Key is required' });
+//   }
+
+//   if (dataKeys.some((dataKey) => dataKey.key === key)) {
+//     return res.status(409).json({ message: `Key "${key}" already exists` });
+//   }
+
+//   const hash = hashFn(key);
+//   dataKeys.push({ key, hash, assignedNode: null });
+//   redistribute();
+//   res.json({ nodes, dataKeys });
+// });
+
+// router.post('/reset', (req, res) => {
+//   nodes = [];
+//   dataKeys = [];
+//   res.json({ nodes, dataKeys });
+// });
+
+// module.exports = router;
+
+
+
+>>>>>>> e5ae96dcefd71aa34e7c01fc755f132fc15bebc7
 const express = require('express');
 const router = express.Router();
 const Node = require('../models/Node');

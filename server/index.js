@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // const express = require("express");
 // const mongoose = require("mongoose");
 // const cors = require("cors");
@@ -27,6 +28,23 @@
 // app.listen(PORT, () => {
 //     console.log(`Server running on port ${PORT}`);
 // });
+=======
+// const express = require('express');
+// const cors = require('cors');
+// const dotenv = require('dotenv');
+// const ringRoutes = require('./routes/ring');
+
+// dotenv.config();
+// const app = express();
+// app.use(cors());
+// app.use(express.json());
+
+// app.use('/api/ring', ringRoutes);
+
+// const PORT = process.env.PORT || 5000;
+// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+>>>>>>> e5ae96dcefd71aa34e7c01fc755f132fc15bebc7
 
 const express = require('express');
 const cors = require('cors');
