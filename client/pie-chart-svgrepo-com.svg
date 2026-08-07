@@ -1,0 +1,33 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer ring: magenta (top-left arc) -->
+  <path d="M 400 40
+           A 360 360 0 0 0 40 400"
+        fill="none"
+        stroke="#BB5FA8"
+        stroke-width="90"
+        stroke-linecap="round" />
+
+  <!-- Outer ring: indigo/blue (bottom, majority arc) -->
+  <path d="M 40 400
+           A 360 360 0 1 0 760 400"
+        fill="none"
+        stroke="#4C5498"
+        stroke-width="90"
+        stroke-linecap="round" />
+
+  <!-- Inner ring: red (top-left arc) -->
+  <path d="M 400 190
+           A 210 210 0 0 0 220 500"
+        fill="none"
+        stroke="#DE5B4E"
+        stroke-width="80"
+        stroke-linecap="round" />
+
+  <!-- Inner ring: orange (right arc) -->
+  <path d="M 400 190
+           A 210 210 0 0 1 580 500"
+        fill="none"
+        stroke="#EDA02F"
+        stroke-width="80"
+        stroke-linecap="round" />
+</svg>
